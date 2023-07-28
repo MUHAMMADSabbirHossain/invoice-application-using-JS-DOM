@@ -47,6 +47,44 @@ addProductBtn.addEventListener('click', function () {
     tr.appendChild(td2);
     tr.appendChild(td3);
     infoTable.appendChild(tr);
-
+    totalCalculation();
 
 });
+
+
+
+function totalCalculation() {
+    const subTotal = calculateSubTotal();
+
+    const subTotalToDisplay = document.getElementById('sub-total');
+    subTotalToDisplay.innerText = subTotal;
+
+
+
+
+}
+
+
+
+
+
+
+function calculateSubTotal() {
+
+    let subTotal = 0;
+
+    const cost = document.getElementsByClassName('item-total');
+
+    for (let i = 0; i < cost.length; i++) {
+        const element = cost[i];
+        const price = parseFloat(element.innerText);
+        subTotal = subTotal + price;
+    }
+
+
+
+    return subTotal;
+
+
+
+}
