@@ -30,8 +30,12 @@ addProductBtn.addEventListener('click', function () {
     const totalPrice = parseFloat(itemPrice.value) * parseFloat(itemQuantity.value);
 
     console.log('total ------------------', totalPrice);
-    const tr = document.createElement('tr');
-    const th = document.createElement('th');
+    // const tr = document.createElement('tr');
+    const tr = element('tr');
+    const th = element('th');
+
+
+
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
@@ -51,6 +55,10 @@ addProductBtn.addEventListener('click', function () {
 
 });
 
+
+function element(param) {
+    return document.createElement(param);
+}
 
 
 function totalCalculation() {
