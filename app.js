@@ -18,6 +18,25 @@ addProductBtn.addEventListener('click', function () {
     const itemPrice = document.getElementById('item-price-input');
     const itemQuantity = document.getElementById('item-quantity-input');
 
+    if (
+        itemName.value == '' ||
+        itemPrice.value < 0 ||
+        itemQuantity.value < 0 ||
+        itemPrice == '' ||
+        itemQuantity.value == '') {
+        console.log('sorry');
+        return;
+
+
+    }
+
+
+
+
+
+
+
+
     {
         // < !-- < tr >
         //                     <th >1</th>
@@ -29,7 +48,7 @@ addProductBtn.addEventListener('click', function () {
 
     const totalPrice = parseFloat(itemPrice.value) * parseFloat(itemQuantity.value);
 
-    console.log('total ------------------', totalPrice);
+
     // const tr = document.createElement('tr');
     const tr = element('tr');
     const th = element('th');
