@@ -62,6 +62,7 @@ function totalCalculation() {
     const tax = subTotal * .2;
     document.getElementById('tax').innerText = tax.toFixed(2);
     document.getElementById('grand-total').innerText = subTotal + tax;
+    document.getElementById('grand-total-2').innerText = subTotal + tax;
 
 
 
